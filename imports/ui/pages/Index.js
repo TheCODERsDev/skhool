@@ -1,15 +1,64 @@
 import React from 'react';
-import { Jumbotron } from 'react-bootstrap';
+import $ from 'jquery';
+import { Jumbotron, Grid } from 'react-bootstrap';
 
-const Index = () => (
-  <div className="Index">
-    <Jumbotron className="text-center">
-      <h2>Base</h2>
-      <p>A starting point for Meteor applications.</p>
-      <p><a className="btn btn-success" href="https://themeteorchef.com/base" role="button">Read the Documentation</a></p>
-      <p style={ { fontSize: '16px', color: '#aaa' } }>Currently at v4.12.0</p>
-    </Jumbotron>
-  </div>
-);
+export default class Index extends React.Component {
+  componentDidMount() {
+    $('#react-root').css('margin-top', 0);
+    $('#slides').superslides({
+      play: 7000,
+      inherit_width_from: '#slider',
+      inherit_height_from: '#slider'
+    });
+  }
 
-export default Index;
+  componentWillUnmount() {
+    $('#react-root').css('margin-top', '');
+  }
+
+  render() {
+    return (
+      <div>
+        <div id="slider" style={{ height: '500px' }}>
+          <div id="slides">
+            <ul className="slides-container">
+              <li>
+                <img src="http://i.imgur.com/I7k8SLo.jpg" alt="" />
+              </li>
+              <li>
+                <img src="http://i.imgur.com/f8FgtLc.jpg" alt="Cinelli" />
+              </li>
+              <li>
+                <img src="http://i.imgur.com/XSFLZtD.jpg" width="1024" height="682" alt="Surly" />
+              </li>
+              <li>
+                <img src="http://i.imgur.com/t2OIT8l.jpg" width="1024" height="683" alt="Cinelli" />
+              </li>
+              <li>
+                <img src="http://i.imgur.com/RgYyVYJ.jpg" width="1024" height="685" alt="Affinity" />
+              </li>
+            </ul>
+
+            <nav className="slides-navigation">
+              <a href="#" className="next" style={{ color: '#fff', padding: '30px' }}>
+                <i className="fa fa-2x fa-chevron-right"></i>
+              </a>
+              <a href="#" className="prev" style={{ color: '#fff', padding: '30px' }}>
+                <i className="fa fa-2x fa-chevron-left"></i>
+              </a>
+            </nav>
+          </div>
+        </div>
+        <div style={{ padding: '30px' }}>
+          <h1 className="text-center">Skhool - Cool school for your skills</h1>
+        </div>
+        <Grid>
+          <Jumbotron className="text-center">
+            <h2>Skhool</h2>
+            <p>Cool school for your skills</p>
+          </Jumbotron>
+        </Grid>
+      </div>
+    );
+  }
+}

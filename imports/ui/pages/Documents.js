@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button, Grid } from 'react-bootstrap';
 import DocumentsList from '../containers/DocumentsList.js';
 
 const Documents = () => (
-  <div className="Documents">
+  <Grid className="Documents">
     <Row>
       <Col xs={ 12 }>
         <div className="page-header clearfix">
@@ -19,7 +19,7 @@ const Documents = () => (
         <DocumentsList />
       </Col>
     </Row>
-  </div>
+  </Grid>
 );
 
 export default Documents;

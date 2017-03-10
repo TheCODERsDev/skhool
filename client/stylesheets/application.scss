@@ -1,3 +1,5 @@
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
 @import "base/extends";
 @import "base/animations";
 @import "base/forms";
@@ -8,3 +10,12 @@
 @import "module/Signup";
 
 @import "state/Navbar";
+
+
+.slides-pagination a {
+  border-color: #fff !important;
+}
+
+slides-pagination a.current {
+  background-color: #fff !important;
+}

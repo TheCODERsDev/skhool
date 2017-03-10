@@ -1,11 +1,12 @@
 import React from 'react';
+import { Grid } from 'react-bootstrap';
 import DocumentEditor from '../components/DocumentEditor.js';
 
 const EditDocument = ({ doc }) => (
-  <div className="EditDocument">
+  <Grid className="EditDocument">
     <h4 className="page-header">Editing "{ doc.title }"</h4>
     <DocumentEditor doc={ doc } />
-  </div>
+  </Grid>
 );
 
 EditDocument.propTypes = {

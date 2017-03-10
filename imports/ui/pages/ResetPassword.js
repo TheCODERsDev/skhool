@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Alert, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
+import { Row, Col, Alert, FormGroup, ControlLabel, FormControl, Button, Grid } from 'react-bootstrap';
 import handleResetPassword from '../../modules/reset-password';
 
 export default class ResetPassword extends React.Component {
@@ -13,7 +13,7 @@ export default class ResetPassword extends React.Component {
 
   render() {
     return (
-      <div className="ResetPassword">
+      <Grid className="ResetPassword">
         <Row>
           <Col xs={ 12 } sm={ 6 } md={ 4 }>
             <h4 className="page-header">Reset Password</h4>
@@ -48,7 +48,7 @@ export default class ResetPassword extends React.Component {
             </form>
           </Col>
         </Row>
-      </div>
+      </Grid>
     );
   }
 }

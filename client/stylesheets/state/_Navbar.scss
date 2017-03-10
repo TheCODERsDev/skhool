@@ -1,6 +1,18 @@
 .navbar-default .navbar-nav > li > a.active,
 .navbar-default .navbar-nav > li > a.active:focus,
 .navbar-default .navbar-nav > li > a.active:hover {
-  color: #555;
-  background-color: #e7e7e7;
+  color: #fff;
+  background-color: #000;
+}
+
+.navbar {
+  border: 0;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+#react-root {
+  margin-top: 60px
 }
