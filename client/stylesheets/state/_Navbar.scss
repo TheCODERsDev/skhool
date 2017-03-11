@@ -13,6 +13,24 @@
   transition: background 0.3s ease;
 }
 
+.navbar-transparent {
+  color: #fff;
+  background: transparent;
+  border: 0;
+
+  .navbar-nav > li > a,
+  .navbar-brand {
+    color: #fff;
+    &:focus, &:hover {
+      color: #fff;
+    }
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+}
+
 #react-root {
   margin-top: 60px
 }

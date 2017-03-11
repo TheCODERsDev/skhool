@@ -7,30 +7,15 @@ import PublicNavigation from './PublicNavigation.js';
 import AuthenticatedNavigation from './AuthenticatedNavigation.js';
 
 const renderNavigation = hasUser => (hasUser ? <AuthenticatedNavigation /> : <PublicNavigation />);
+const isTopIndex = () => $(window).scrollTop() === 0 && url.parse(location.href).pathname === '/';
 const styleNavbar = (transparent) => {
-  const $font = $('.navbar-default .navbar-nav > li > a,.navbar-default .navbar-brand')
   const $navbar = $('.navbar');
-  const $iconBar = $('.navbar-default .navbar-toggle .icon-bar');
-  if (transparent) {
-    $navbar.css({
-      color: '#fff',
-      background: 'transparent',
-      border: '0',
-    });
-
-    $font.css('color', '#fff')
-    $iconBar.css('background-color', '#fff')
+  if(transparent) {
+    $navbar.addClass('navbar-transparent');
   } else {
-    $navbar.css({
-      color: '',
-      background: '',
-      border: '',
-    });
-    $font.css('color', '')
-    $iconBar.css('background-color', '')
+    $navbar.removeClass('navbar-transparent');
   }
 };
-const isTopIndex = () => $(window).scrollTop() === 0 && url.parse(location.href).pathname === '/';
 
 class AppNavigation extends React.Component {
   constructor(props) {
