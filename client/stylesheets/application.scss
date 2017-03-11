@@ -10,12 +10,5 @@
 @import "module/Signup";
 
 @import "state/Navbar";
-
-
-.slides-pagination a {
-  border-color: #fff !important;
-}
-
-.slides-pagination a.current {
-  background-color: #fff !important;
-}
+@import "state/FlexboxGallery";
+@import "state/Sliders";
