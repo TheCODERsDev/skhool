@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import { Jumbotron, Grid } from 'react-bootstrap';
+import FlexboxGallery from './../components/FlexboxGallery';
 
 export default class Index extends React.Component {
   componentDidMount() {
@@ -54,88 +55,38 @@ export default class Index extends React.Component {
             <h2>Skhool</h2>
             <p>Cool school for your skills</p>
           </Jumbotron>
-          <div className="flexbox-gallery">
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" alt=""/>
-                <figcaption>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </figcaption>
-              </figure>
-            </a>
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg02.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg02.jpg" alt=""/>
-                <figcaption>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                </figcaption>
-              </figure>
-            </a>
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg03.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg03.jpg" alt=""/>
-                <figcaption>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                </figcaption>
-              </figure>
-            </a>
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg04.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg04.jpg" alt=""/>
-                <figcaption>
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </figcaption>
-              </figure>
-            </a>
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg05.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg05.jpg" alt=""/>
-                <figcaption>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                </figcaption>
-              </figure>
-            </a>
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg" alt=""/>
-                <figcaption>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </figcaption>
-              </figure>
-            </a>
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg07.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg07.jpg" alt=""/>
-                 <figcaption>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua
-                </figcaption>
-              </figure>
-            </a>
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg" alt=""/>
-                <figcaption>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </figcaption>
-              </figure>
-            </a>
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg09.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg09.jpg" alt=""/>
-                <figcaption>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </figcaption>
-              </figure>
-            </a>
-            <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg10.jpg">
-              <figure>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg10.jpg" alt=""/>
-                <figcaption>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </figcaption>
-              </figure>
-            </a>
-          </div>
+          <FlexboxGallery.Container>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg02.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg03.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg04.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg05.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg07.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg09.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg10.jpg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </FlexboxGallery.Item>
+          </FlexboxGallery.Container>
         </Grid>
       </div>
     );
