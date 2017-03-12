@@ -11,6 +11,7 @@
   -moz-transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
+  margin-bottom: 0px !important;
 }
 
 .navbar-transparent {
@@ -32,5 +33,5 @@
 }
 
 #react-root {
-  margin-top: 60px
+  margin-top: 50px
 }

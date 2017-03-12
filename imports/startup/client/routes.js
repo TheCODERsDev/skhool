@@ -11,11 +11,13 @@ import EditDocument from '../../ui/containers/EditDocument.js';
 import ViewDocument from '../../ui/containers/ViewDocument.js';
 import Index from '../../ui/pages/Index.js';
 import Login from '../../ui/pages/Login.js';
-import ViewCourse from '../../ui/pages/ViewCourse.js';
 import NotFound from '../../ui/pages/NotFound.js';
 import RecoverPassword from '../../ui/pages/RecoverPassword.js';
 import ResetPassword from '../../ui/pages/ResetPassword.js';
 import Signup from '../../ui/pages/Signup.js';
+
+import ViewCourse from '../../ui/pages/ViewCourse.js';
+import ViewLesson from '../../ui/pages/ViewLesson.js';
 
 const authenticate = (nextState, replace) => {
   if (!Meteor.loggingIn() && !Meteor.userId()) {
@@ -41,6 +43,7 @@ Meteor.startup(() => {
         <Route name="signup" path="/signup" component={ Signup } />
 
         <Route name="viewCourse" path="/course" component={ ViewCourse } />
+        <Route name="viewLesson" path="/lesson" component={ ViewLesson } />
 
         <Route path="*" component={ NotFound } />
       </Route>

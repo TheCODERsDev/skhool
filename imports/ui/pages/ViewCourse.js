@@ -74,43 +74,43 @@ export default class ViewCourse extends React.Component {
               <tbody>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 1:</td>
-                  <td>Exposure to sofa fire</td>
+                  <td><Link to="/lesson">Exposure to sofa fire</Link></td>
                 </tr>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 2:</td>
-                  <td>Spirochetal infection, unspecified</td>
+                  <td><Link to="/lesson">Spirochetal infection, unspecified</Link></td>
                 </tr>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 3:</td>
-                  <td>Corrosion of unspecified degree of multiple right fingers (nail), not including thumb, subsequent encounter</td>
+                  <td><Link to="/lesson">Corrosion of unspecified degree of multiple right fingers (nail), not including thumb, subsequent encounter</Link></td>
                 </tr>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 4:</td>
-                  <td>Rheumatoid myopathy with rheumatoid arthritis of left ankle and foot</td>
+                  <td><Link to="/lesson">Rheumatoid myopathy with rheumatoid arthritis of left ankle and foot</Link></td>
                 </tr>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 5:</td>
-                  <td>Stress fracture, pelvis</td>
+                  <td><Link to="/lesson">Stress fracture, pelvis</Link></td>
                 </tr>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 6:</td>
-                  <td>Driver of pick-up truck or van injured in collision with other nonmotor vehicle in nontraffic accident, sequela</td>
+                  <td><Link to="/lesson">Driver of pick-up truck or van injured in collision with other nonmotor vehicle in nontraffic accident, sequela</Link></td>
                 </tr>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 7:</td>
-                  <td>Disorder of fructose metabolism, unspecified</td>
+                  <td><Link to="/lesson">Disorder of fructose metabolism, unspecified</Link></td>
                 </tr>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 8:</td>
-                  <td>Other mechanical complication of ventricular intracranial (communicating) shunt</td>
+                  <td><Link to="/lesson">Other mechanical complication of ventricular intracranial (communicating) shunt</Link></td>
                 </tr>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 9:</td>
-                  <td>Displaced pilon fracture of unspecified tibia, initial encounter for closed fracture</td>
+                  <td><Link to="/lesson">Displaced pilon fracture of unspecified tibia, initial encounter for closed fracture</Link></td>
                 </tr>
                 <tr>
                   <td style={{ whiteSpace: 'nowrap'}}>Lesson 10:</td>
-                  <td>Intentional self-harm by drowning and submersion while in bathtub, sequela</td>
+                  <td><Link to="/lesson">Intentional self-harm by drowning and submersion while in bathtub, sequela</Link></td>
                 </tr>
               </tbody>
             </table>
