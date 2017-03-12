@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Container = ({ children }) => (
   <div className="flexbox-gallery">
@@ -7,14 +8,14 @@ const Container = ({ children }) => (
 );
 
 const Item = ({ image, to, children }) => (
-  <a href={ to }>
+  <Link to={ to }>
     <figure>
       <img src={ image } alt=""/>
       <figcaption>
         { children }
       </figcaption>
     </figure>
-  </a>
+  </Link>
 );
 
 export { Container, Item }

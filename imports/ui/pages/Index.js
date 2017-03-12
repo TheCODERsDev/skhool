@@ -56,34 +56,34 @@ export default class Index extends React.Component {
             <p>Cool school for your skills</p>
           </Jumbotron>
           <FlexboxGallery.Container>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg02.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg02.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg03.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg03.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg04.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg04.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg05.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg05.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg06.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg07.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg07.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg08.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg09.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg09.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
-            <FlexboxGallery.Item to="" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg10.jpg">
+            <FlexboxGallery.Item to="/course" image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg10.jpg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
           </FlexboxGallery.Container>
