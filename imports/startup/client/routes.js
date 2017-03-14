@@ -31,6 +31,7 @@ const authenticate = (nextState, replace) => {
 Meteor.startup(() => {
   render(
     <Router history={ browserHistory }>
+      <Route name="viewLesson" path="/lesson" component={ ViewLesson } />
       <Route path="/" component={ App }>
         <IndexRoute name="index" component={ Index } />
         <Route name="documents" path="/documents" component={ Documents } onEnter={ authenticate } />
@@ -43,7 +44,6 @@ Meteor.startup(() => {
         <Route name="signup" path="/signup" component={ Signup } />
 
         <Route name="viewCourse" path="/course" component={ ViewCourse } />
-        <Route name="viewLesson" path="/lesson" component={ ViewLesson } />
 
         <Route path="*" component={ NotFound } />
       </Route>

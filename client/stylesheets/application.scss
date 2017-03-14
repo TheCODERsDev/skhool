@@ -13,3 +13,17 @@
 @import "state/FlexboxGallery";
 @import "state/Sliders";
 @import "state/UserCard";
+
+.ViewLesson {
+  .navbar-header {
+    float: none !important;
+  }
+
+  .navbar-toolbox {
+    padding: 8px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
+    float: right;
+  }
+}
