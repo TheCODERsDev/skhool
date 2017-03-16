@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Row, Col, FormGroup, ControlLabel, FormControl, Button, Grid } from 'react-bootstrap';
+import { Row, Col, Button, FormGroup, Label, Input, Container, Alert } from 'reactstrap';
 import handleSignup from '../../modules/signup';
 
 export default class Signup extends React.Component {
@@ -14,7 +14,7 @@ export default class Signup extends React.Component {
 
   render() {
     return (
-      <Grid className="Signup">
+      <Container className="Signup">
         <Row>
           <Col xs={ 12 } sm={ 6 } md={ 4 }>
             <h4 className="page-header">Sign Up</h4>
@@ -25,8 +25,8 @@ export default class Signup extends React.Component {
               <Row>
                 <Col xs={ 6 } sm={ 6 }>
                   <FormGroup>
-                    <ControlLabel>First Name</ControlLabel>
-                    <FormControl
+                    <Label>First Name</Label>
+                    <Input
                       type="text"
                       ref="firstName"
                       name="firstName"
@@ -36,8 +36,8 @@ export default class Signup extends React.Component {
                 </Col>
                 <Col xs={ 6 } sm={ 6 }>
                   <FormGroup>
-                    <ControlLabel>Last Name</ControlLabel>
-                    <FormControl
+                    <Label>Last Name</Label>
+                    <Input
                       type="text"
                       ref="lastName"
                       name="lastName"
@@ -47,8 +47,8 @@ export default class Signup extends React.Component {
                 </Col>
               </Row>
               <FormGroup>
-                <ControlLabel>Email Address</ControlLabel>
-                <FormControl
+                <Label>Email Address</Label>
+                <Input
                   type="text"
                   ref="emailAddress"
                   name="emailAddress"
@@ -56,20 +56,20 @@ export default class Signup extends React.Component {
                 />
               </FormGroup>
               <FormGroup>
-                <ControlLabel>Password</ControlLabel>
-                <FormControl
+                <Label>Password</Label>
+                <Input
                   type="password"
                   ref="password"
                   name="password"
                   placeholder="Password"
                 />
               </FormGroup>
-              <Button type="submit" bsStyle="success">Sign Up</Button>
+              <Button type="submit" color="success">Sign Up</Button>
             </form>
             <p>Already have an account? <Link to="/login">Log In</Link>.</p>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }

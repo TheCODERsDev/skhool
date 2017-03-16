@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonToolbar, ButtonGroup, Button, Grid } from 'react-bootstrap';
+import { Button, Container, Alert, ButtonGroup, ButtonToolbar } from 'reactstrap';
 import { browserHistory } from 'react-router';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { removeDocument } from '../../api/documents/methods.js';
@@ -22,18 +22,18 @@ const handleRemove = (_id) => {
 };
 
 const ViewDocument = ({ doc }) => (
-  <Grid className="ViewDocument">
+  <Container className="ViewDocument">
     <div className="page-header clearfix">
       <h4 className="pull-left">{ doc && doc.title }</h4>
       <ButtonToolbar className="pull-right">
-        <ButtonGroup bsSize="small">
+        <ButtonGroup size="small">
           <Button onClick={ () => handleEdit(doc._id) }>Edit</Button>
           <Button onClick={ () => handleRemove(doc._id) } className="text-danger">Delete</Button>
         </ButtonGroup>
       </ButtonToolbar>
     </div>
     { doc && doc.body }
-  </Grid>
+  </Container>
 );
 
 ViewDocument.propTypes = {

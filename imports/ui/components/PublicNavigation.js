@@ -1,15 +1,17 @@
 import React from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Nav, NavItem } from 'react-bootstrap';
+import { Nav, NavItem } from 'reactstrap';
+import { Link } from 'react-router';
+
 
 const PublicNavigation = () => (
-  <Nav pullRight>
-    <LinkContainer to="signup">
-      <NavItem eventKey={ 1 } href="/signup">Sign Up</NavItem>
-    </LinkContainer>
-    <LinkContainer to="login">
-      <NavItem eventKey={ 2 } href="/login">Log In</NavItem>
-    </LinkContainer>
+  <Nav className="ml-auto" navbar>
+    <NavItem>
+      <Link className="nav-link" to="/signup">Sign Up</Link>
+    </NavItem>
+    <NavItem>
+      <Link className="nav-link" to="/login">Log In</Link>
+    </NavItem>
   </Nav>
 );
 

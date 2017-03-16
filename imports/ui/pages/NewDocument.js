@@ -1,12 +1,12 @@
 import React from 'react';
 import DocumentEditor from '../components/DocumentEditor.js';
-import { Grid } from 'react-bootstrap';
+import { Container } from 'reactstrap';
 
 const NewDocument = () => (
-  <Grid className="NewDocument">
+  <Container className="NewDocument">
     <h4 className="page-header">New Document</h4>
     <DocumentEditor />
-  </Grid>
+  </Container>
 );
 
 export default NewDocument;

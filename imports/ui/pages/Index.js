@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import { Jumbotron, Grid } from 'react-bootstrap';
+import { Jumbotron, Container } from 'reactstrap';
 import FlexboxGallery from './../components/FlexboxGallery';
 
 export default class Index extends React.Component {
@@ -50,7 +50,7 @@ export default class Index extends React.Component {
             </nav>
           </div>
         </div>
-        <Grid style={{ 'marginTop': '20px'}}>
+        <Container style={{ 'marginTop': '20px'}}>
           <Jumbotron className="text-center">
             <h2>Skhool</h2>
             <p>Cool school for your skills</p>
@@ -87,7 +87,7 @@ export default class Index extends React.Component {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </FlexboxGallery.Item>
           </FlexboxGallery.Container>
-        </Grid>
+        </Container>
       </div>
     );
   }

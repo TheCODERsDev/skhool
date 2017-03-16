@@ -1,12 +1,12 @@
 import React from 'react';
-import { Alert, Grid } from 'react-bootstrap';
+import { Alert, Container } from 'reactstrap';
 
 const NotFound = () => (
-  <Grid className="NotFound">
-    <Alert bsStyle="danger">
+  <Container className="NotFound">
+    <Alert color="danger">
       <p><strong>Error [404]</strong>: { window.location.pathname } does not exist.</p>
     </Alert>
-  </Grid>
+  </Container>
 );
 
 export default NotFound;

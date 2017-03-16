@@ -1,7 +1,7 @@
 /* eslint-disable max-len, no-return-assign */
 
 import React from 'react';
-import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
+import { FormGroup, Label, Input, Button } from 'reactstrap';
 import documentEditor from '../../modules/document-editor.js';
 
 export default class DocumentEditor extends React.Component {
@@ -17,8 +17,8 @@ export default class DocumentEditor extends React.Component {
       onSubmit={ event => event.preventDefault() }
     >
       <FormGroup>
-        <ControlLabel>Title</ControlLabel>
-        <FormControl
+        <Label>Title</Label>
+        <Input
           type="text"
           name="title"
           defaultValue={ doc && doc.title }
@@ -26,15 +26,15 @@ export default class DocumentEditor extends React.Component {
         />
       </FormGroup>
       <FormGroup>
-        <ControlLabel>Body</ControlLabel>
-        <FormControl
-          componentClass="textarea"
+        <Label>Body</Label>
+        <Input
+          type="textarea"
           name="body"
           defaultValue={ doc && doc.body }
           placeholder="Congratulations! Today is your day. You're off to Great Places! You're off and away!"
         />
       </FormGroup>
-      <Button type="submit" bsStyle="success">
+      <Button type="submit" color="success">
         { doc && doc._id ? 'Save Changes' : 'Add Document' }
       </Button>
     </form>);

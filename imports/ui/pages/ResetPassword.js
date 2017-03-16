@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Alert, FormGroup, ControlLabel, FormControl, Button, Grid } from 'react-bootstrap';
+import { Row, Col, Button, FormGroup, Label, Input, Container, Alert } from 'reactstrap';
 import handleResetPassword from '../../modules/reset-password';
 
 export default class ResetPassword extends React.Component {
@@ -13,11 +13,11 @@ export default class ResetPassword extends React.Component {
 
   render() {
     return (
-      <Grid className="ResetPassword">
+      <Container className="ResetPassword">
         <Row>
           <Col xs={ 12 } sm={ 6 } md={ 4 }>
             <h4 className="page-header">Reset Password</h4>
-            <Alert bsStyle="info">
+            <Alert color="info">
               To reset your password, enter a new one below. You will be logged in
     with your new password.
             </Alert>
@@ -27,8 +27,8 @@ export default class ResetPassword extends React.Component {
               onSubmit={ this.handleSubmit }
             >
               <FormGroup>
-                <ControlLabel>New Password</ControlLabel>
-                <FormControl
+                <Label>New Password</Label>
+                <Input
                   type="password"
                   ref="newPassword"
                   name="newPassword"
@@ -36,19 +36,19 @@ export default class ResetPassword extends React.Component {
                 />
               </FormGroup>
               <FormGroup>
-                <ControlLabel>Repeat New Password</ControlLabel>
-                <FormControl
+                <Label>Repeat New Password</Label>
+                <Input
                   type="password"
                   ref="repeatNewPassword"
                   name="repeatNewPassword"
                   placeholder="Repeat New Password"
                 />
               </FormGroup>
-              <Button type="submit" bsStyle="success">Reset Password &amp; Login</Button>
+              <Button type="submit" color="success">Reset Password &amp; Login</Button>
             </form>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }

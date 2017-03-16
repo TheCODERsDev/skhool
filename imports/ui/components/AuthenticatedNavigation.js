@@ -1,7 +1,7 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
+import { browserHistory, Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Nav, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
 
 const handleLogout = () => Meteor.logout(() => browserHistory.push('/login'));
@@ -12,19 +12,24 @@ const userName = () => {
   return user ? `${name.first} ${name.last}` : '';
 };
 
-const AuthenticatedNavigation = () => (
-  <div>
-    <Nav>
-      <LinkContainer to="/documents">
-        <NavItem eventKey={ 2 } href="/documents">Documents</NavItem>
-      </LinkContainer>
-    </Nav>
-    <Nav pullRight>
-      <NavDropdown eventKey={ 3 } title={ userName() } id="basic-nav-dropdown">
-        <MenuItem eventKey={ 3.1 } onClick={ handleLogout }>Logout</MenuItem>
-      </NavDropdown>
-    </Nav>
-  </div>
-);
-
-export default AuthenticatedNavigation;
+export default class AuthenticatedNavigation extends React.Component {
+  render() {
+    return (
+      <Nav className="ml-auto" navbar>
+        <NavItem>
+          <Link className="nav-link" to="/documents/">Documents</Link>
+        </NavItem>
+        <NavItem>
+          <UncontrolledDropdown>
+            <DropdownToggle caret nav={ true }>
+              { userName() }
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem onClick={ handleLogout }>Logout</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        </NavItem>
+      </Nav>
+    );
+  }
+}

@@ -64,17 +64,17 @@
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "bcrypt": "^0.8.7",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^2.2.4",
     "jquery-validation": "^1.15.1",
     "react": "^15.3.2",
     "react-addons-pure-render-mixin": "^15.3.2",
-    "react-bootstrap": "^0.30.5",
     "react-dom": "^15.3.2",
     "react-komposer": "^1.13.1",
     "react-player": "^0.14.3",
     "react-router": "^3.0.0",
     "react-router-bootstrap": "^0.23.1",
+    "reactstrap": "^4.3.0",
     "superslides": "nicinabox/superslides",
     "url": "^0.11.0"
   }

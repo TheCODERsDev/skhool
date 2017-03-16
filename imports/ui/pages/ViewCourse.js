@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Grid, Col, Row, Button } from 'react-bootstrap';
+import { Container, Col, Row, Button } from 'reactstrap';
 
 export default class ViewCourse extends React.Component {
   render() {
     return (
-      <Grid className="ViewCourse">
+      <Container className="ViewCourse">
         <Row>
           <Col xs={12}>
             <h1>Meteor React</h1>
@@ -19,7 +19,7 @@ export default class ViewCourse extends React.Component {
             </p>
           </Col>
           <Col xs={12} sm={8}>
-            <img src="http://lorempixel.com/1200/800/nature/" className="img-responsive" />
+            <img src="http://lorempixel.com/1200/800/nature/" className="img-fluid" />
             <h5>Description</h5>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -29,7 +29,7 @@ export default class ViewCourse extends React.Component {
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </Col>
           <Col xs={12} sm={4} className="text-center">
-            <p><Button bsStyle="primary" bsSize="large">Enroll</Button></p>
+            <p><Button color="primary" bsSize="large">Enroll</Button></p>
             <p>
               <strong>Videos:</strong> 16<br/>
               <strong>Length:</strong> 5.4 Hours<br/>
@@ -116,7 +116,7 @@ export default class ViewCourse extends React.Component {
             </table>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }

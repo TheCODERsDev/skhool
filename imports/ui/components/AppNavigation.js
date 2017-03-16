@@ -1,63 +1,45 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router';
 import $ from 'jquery';
 import url from 'url';
+import { Collapse, Navbar, NavbarToggler } from 'reactstrap';
 import PublicNavigation from './PublicNavigation.js';
 import AuthenticatedNavigation from './AuthenticatedNavigation.js';
 
 const renderNavigation = hasUser => (hasUser ? <AuthenticatedNavigation /> : <PublicNavigation />);
-const isTopIndex = () => $(window).scrollTop() === 0 && url.parse(location.href).pathname === '/';
-const styleNavbar = (transparent) => {
-  const $navbar = $('.navbar');
-  if(transparent) {
-    $navbar.addClass('navbar-transparent');
-  } else {
-    $navbar.removeClass('navbar-transparent');
-  }
-};
 
 class AppNavigation extends React.Component {
   constructor(props) {
     super(props);
+
+    this.toggle = this.toggle.bind(this);
     this.state = {
       hasUser: null,
+      isOpen: false
     };
   }
 
-  componentDidMount() {
-    styleNavbar(isTopIndex());
-    $(window).scroll(function() {
-      styleNavbar(isTopIndex())
-    });
-  }
-
   componentWillReceiveProps(nextProps) {
-    styleNavbar(isTopIndex());
     this.setState({ hasUser: nextProps.hasUser });
   }
 
-  toggle(navExpanded) {
-    if(navExpanded) {
-      styleNavbar(false)
-    } else {
-      styleNavbar(isTopIndex())
-    }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
   }
 
   render() {
     return (
-      <Navbar fixedTop collapseOnSelect={ true } onToggle={ this.toggle }>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Link to="/">Skhool</Link>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          { renderNavigation(this.state.hasUser) }
-        </Navbar.Collapse>
-      </Navbar>
+      <div>
+        <Navbar color="faded" light toggleable fixed="top">
+          <NavbarToggler right onClick={this.toggle} />
+          <Link to="/" className="navbar-brand">Skhool</Link>
+          <Collapse isOpen={this.state.isOpen} navbar>
+            { renderNavigation(this.state.hasUser) }
+          </Collapse>
+        </Navbar>
+      </div>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Row, Col, FormGroup, ControlLabel, FormControl, Button, Grid } from 'react-bootstrap';
+import { Row, Col, Button, FormGroup, Label, Input, Container } from 'reactstrap';
 import handleLogin from '../../modules/login';
 
 export default class Login extends React.Component {
@@ -14,7 +14,7 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      <Grid className="Login">
+      <Container className="Login">
         <Row>
           <Col xs={ 12 } sm={ 6 } md={ 4 }>
             <h4 className="page-header">Login</h4>
@@ -24,8 +24,8 @@ export default class Login extends React.Component {
               onSubmit={ this.handleSubmit }
             >
               <FormGroup>
-                <ControlLabel>Email Address</ControlLabel>
-                <FormControl
+                <Label>Email Address</Label>
+                <Input
                   type="email"
                   ref="emailAddress"
                   name="emailAddress"
@@ -33,22 +33,22 @@ export default class Login extends React.Component {
                 />
               </FormGroup>
               <FormGroup>
-                <ControlLabel>
+                <Label>
                   <span className="pull-left">Password</span>
                   <Link className="pull-right" to="/recover-password">Forgot Password?</Link>
-                </ControlLabel>
-                <FormControl
+                </Label>
+                <Input
                   type="password"
                   ref="password"
                   name="password"
                   placeholder="Password"
                 />
               </FormGroup>
-              <Button type="submit" bsStyle="success">Login</Button>
+              <Button type="submit" color="success">Login</Button>
             </form>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }

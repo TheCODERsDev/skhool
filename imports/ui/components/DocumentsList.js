@@ -1,6 +1,6 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
-import { ListGroup, ListGroupItem, Alert } from 'react-bootstrap';
+import { ListGroup, ListGroupItem, Alert } from 'reactstrap';
 
 const handleNav = (_id) => {
   browserHistory.push(`/documents/${_id}`);
@@ -14,7 +14,7 @@ const DocumentsList = ({ documents }) => (
       </ListGroupItem>
     ))}
   </ListGroup> :
-  <Alert bsStyle="warning">No documents yet.</Alert>
+  <Alert color="warning">No documents yet.</Alert>
 );
 
 DocumentsList.propTypes = {
