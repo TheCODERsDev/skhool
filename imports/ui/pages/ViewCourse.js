@@ -18,8 +18,8 @@ export default class ViewCourse extends React.Component {
               <i className="fa fa-star-half"></i>
             </p>
           </Col>
-          <Col xs={12} sm={8}>
-            <img src="http://lorempixel.com/1200/800/nature/" className="img-fluid" />
+          <Col xs={12} lg={8}>
+            <img src="http://lorempixel.com/1200/800/nature" className="img-fluid" />
             <h5>Description</h5>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -28,41 +28,27 @@ export default class ViewCourse extends React.Component {
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </Col>
-          <Col xs={12} sm={4} className="text-center">
-            <p><Button color="primary" bsSize="large">Enroll</Button></p>
+          <Col xs={12} lg={4} className="text-center">
+            <p><Button color="primary" size="large">Enroll</Button></p>
             <p>
               <strong>Videos:</strong> 16<br/>
               <strong>Length:</strong> 5.4 Hours<br/>
               <strong>Level:</strong> Beginner<br/>
             </p>
-            <div className="card hovercard">
-              <div className="cardheader">
-
+            <div className="user-card">
+              <div className="user-card-header">
+                <div className="user-card-header__avatar" style={{ backgroundImage: 'url(http://lorempixel.com/1200/800/people/9)' }}></div>
+                <a className="user-card-header__follow" href="http://codepen.io/Ceece"><i className="fa fa-heart"></i></a>
               </div>
-              <div className="avatar">
-                <img alt="" src="http://lorempixel.com/100/100/people/9/" />
+              <div className="user-card-content">
+                <div className="user-card-content__username">Juanita Shelton</div>
+                <div className="user-card-content__bio">Twitter buff. Travel maven. Wannabe internet trailblazer. Avid alcohol nerd.</div>
               </div>
-              <div className="info">
-                <div className="title">
-                  <a target="_blank" href="http://scripteden.com/">Script Eden</a>
-                </div>
-                <div className="desc">Passionate designer</div>
-                <div className="desc">Curious developer</div>
-                <div className="desc">Tech geek</div>
-              </div>
-              <div className="bottom">
-                  <a className="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
-                    <i className="fa fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-danger btn-sm" rel="publisher" href="https://plus.google.com/+ahmshahnuralam">
-                    <i className="fa fa-google-plus"></i>
-                  </a>
-                  <a className="btn btn-primary btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
-                    <i className="fa fa-facebook"></i>
-                  </a>
-                  <a className="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
-                    <i className="fa fa-behance"></i>
-                  </a>
+              <div className="user-card-footer">
+                <i className="fa fa-facebook"></i>
+                <i className="fa fa-youtube"></i>
+                <i className="fa fa-twitter"></i>
+                <i className="fa fa-link"></i>
               </div>
             </div>
           </Col>
