@@ -9,9 +9,9 @@ div.flexbox-gallery {
 
   a {
     display: inline-block;
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
     width: calc(100);
-    margin-right: 8px;
+    /*margin-right: 8px;*/
     text-decoration: none;
     color: black;
 
@@ -22,9 +22,15 @@ div.flexbox-gallery {
     figure {
       margin: 0;
       overflow: hidden;
+      position: relative;
 
       figcaption {
-        margin-top: 15px;
+        position: absolute;
+        bottom: 0;
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        width: 100%;
+        padding: 8px;
       }
 
       img {
