@@ -1,2 +1,2 @@
-import '../../api/documents/methods.js';
-import '../../api/documents/server/publications.js';
+import '../../api/courses/methods';
+import '../../api/courses/publications';

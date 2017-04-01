@@ -1,6 +1,5 @@
 import React from 'react';
 import { browserHistory, Link } from 'react-router';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Nav, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
 
@@ -17,7 +16,7 @@ export default class AuthenticatedNavigation extends React.Component {
     return (
       <Nav className="ml-auto" navbar>
         <NavItem>
-          <Link className="nav-link" to="/documents/">Documents</Link>
+          <Link className="nav-link" to="/courses/">Courses</Link>
         </NavItem>
         <NavItem>
           <UncontrolledDropdown>
