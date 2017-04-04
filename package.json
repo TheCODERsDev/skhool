@@ -64,9 +64,12 @@
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "bcrypt": "^0.8.7",
+    "bluebird": "^3.5.0",
     "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^2.2.4",
     "jquery-validation": "^1.15.1",
+    "meteor-node-stubs": "^0.2.6",
+    "qs": "^6.4.0",
     "react": "^15.3.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-addons-pure-render-mixin": "^15.3.2",
@@ -78,6 +81,7 @@
     "react-router-bootstrap": "^0.23.1",
     "reactstrap": "^4.3.0",
     "superslides": "nicinabox/superslides",
-    "url": "^0.11.0"
+    "url": "^0.11.0",
+    "url-parse": "^1.1.8"
   }
 }
