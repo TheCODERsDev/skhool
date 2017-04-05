@@ -26,11 +26,11 @@ export const formatLesson = new ValidatedMethod({
         const { snippet } = response.items[0];
         return {
           course,
-          type: 'youtube',
           link: `https://www.youtube.com/watch?v=${id}`,
           title: snippet.title,
           description: snippet.description,
-          thumbnails: snippet.thumbnails,
+          picture: snippet.thumbnails.standard.url,
+          thumbnail: snippet.thumbnails.medium.url,
           data: snippet,
         };
       }
