@@ -3,6 +3,7 @@ import { Button, Container, ButtonGroup, ButtonToolbar } from 'reactstrap';
 import { browserHistory } from 'react-router';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { removeCourse } from '../../api/courses/methods';
+import LessonList from '../components/LessonList';
 
 const handleEdit = (_id) => {
   browserHistory.push(`/courses/${_id}/edit`);
@@ -21,7 +22,7 @@ const handleRemove = (_id) => {
   }
 };
 
-const CourseView = ({ doc }) => (
+const CourseView = ({ doc, lessons }) => (
   <Container className="CourseView">
     <div className="page-header clearfix">
       <h4 className="pull-left">{ doc && doc.title }</h4>
@@ -32,12 +33,17 @@ const CourseView = ({ doc }) => (
         </ButtonGroup>
       </ButtonToolbar>
     </div>
-    { doc && doc.body }
+    <div className="mt-3 mb-3">
+      { doc && doc.body }
+    </div>
+    <h5>Lessons</h5>
+    <LessonList lessons={ lessons }></LessonList>
   </Container>
 );
 
 CourseView.propTypes = {
   doc: React.PropTypes.object,
+  lessons: React.PropTypes.array,
 };
 
 export default CourseView;

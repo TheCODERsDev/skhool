@@ -28,6 +28,7 @@ export default class CourseEditor extends React.Component {
       <FormGroup>
         <Label>Body</Label>
         <Input
+          style={{ height: '200px' }}
           type="textarea"
           name="body"
           defaultValue={ doc && doc.body }

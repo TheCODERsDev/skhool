@@ -1,10 +1,11 @@
-/* eslint-disable max-len, no-return-assign */
+/* eslint-disable max-len */
 
 import React from 'react';
-import { FormGroup, Label, Input, Button, Table } from 'reactstrap';
+import { FormGroup, Label, Input, Button } from 'reactstrap';
 import { Bert } from 'meteor/themeteorchef:bert';
-import $ from './../../modules/validation.js';
-import { formatLesson, upsertLesson, removeLesson } from '../../api/lessons/methods';
+import $ from './../../modules/validation';
+import { formatLesson, upsertLesson } from '../../api/lessons/methods';
+import LessonList from './LessonList';
 
 const validate = (component) => {
   $(component.editor).validate({
@@ -33,14 +34,6 @@ const validate = (component) => {
   });
 };
 
-const handleRemove = ({ _id, title }) => {
-  if (confirm(`Are you sure to remove ${title}`)) {
-    removeLesson.callPromise({ _id })
-    .then(() => Bert.alert('Course deleted!', 'success'))
-    .catch(error => Bert.alert(error.message, 'danger'));
-  }
-};
-
 export default class CourseEditor extends React.Component {
   componentDidMount() {
     validate(this);
@@ -48,31 +41,14 @@ export default class CourseEditor extends React.Component {
 
   render() {
     return (<div>
-      <form ref={ form => (this.editor = form) } onSubmit={ event => event.preventDefault() } >
+      <form className="mb-3" ref={ form => (this.editor = form) } onSubmit={ event => event.preventDefault() } >
         <FormGroup>
           <Label>Lesson Link</Label>
           <Input type="text" name="link" placeholder="Hohoho! Just place your link here" />
         </FormGroup>
         <Button type="submit" color="success">Add Lesson</Button>
       </form>
-
-      <Table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Lesson</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.lessons.map((lesson, index) => (
-            <tr key={ lesson._id }>
-              <td>{ index + 1 }</td>
-              <td>{ lesson.title }</td>
-              <td><Button color="danger" onClick={ () => handleRemove(lesson) }><i className="fa fa-trash"></i></Button></td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+      <LessonList lessons={ this.props.lessons } editable={ true }></LessonList>
     </div>);
   }
 }
