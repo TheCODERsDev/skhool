@@ -1,6 +1,6 @@
 import { Mongo } from 'meteor/mongo';
 
-const Lessons = new Mongo.Collection('Lessons');
+const Lessons = new Mongo.Collection('lessons');
 export default Lessons;
 
 Lessons.allow({
