@@ -1,0 +1,23 @@
+.radio-image {
+  input {
+    position: absolute;
+    top: 4px;
+    left: 20px;
+    z-index: 9;
+  }
+
+  input + img {
+    cursor:pointer;
+    border:2px solid transparent;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  input:checked + img {
+    border:2px solid $brand-primary;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+}

@@ -26,6 +26,14 @@ Courses.schema = new SimpleSchema({
     type: String,
     label: 'The body of the course.',
   },
+  picture: {
+    type: String,
+    label: 'The picture of the course.',
+  },
+  thumbnail: {
+    type: String,
+    label: 'The thumbnail of the course.',
+  },
 });
 
 Courses.attachSchema(Courses.schema);

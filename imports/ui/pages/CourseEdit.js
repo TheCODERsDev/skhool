@@ -6,7 +6,7 @@ import LessonEditor from '../components/LessonEditor';
 const CourseEdit = ({ doc, lessons }) => (
   <Container className="CourseEdit">
     <h4 className="page-header">Editing "{ doc.title }"</h4>
-    <CourseEditor doc={ doc } />
+    <CourseEditor doc={ doc } lessons={ lessons } />
     <hr />
     <h4>Lessons</h4>
     <LessonEditor course={ doc } lessons={ lessons } />

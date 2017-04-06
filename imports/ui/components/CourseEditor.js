@@ -1,19 +1,26 @@
 /* eslint-disable max-len, no-return-assign */
 
 import React from 'react';
-import { FormGroup, Label, Input, Button } from 'reactstrap';
+import { FormGroup, Label, Input, Button, Row, Col } from 'reactstrap';
 import { browserHistory } from 'react-router';
 import { Bert } from 'meteor/themeteorchef:bert';
+import { find } from 'lodash';
 import { upsertCourse } from '../../api/courses/methods';
 import $ from '../../modules/validation';
 
 const handleUpsert = (component) => {
-  const { doc } = component.props;
+  const { doc, lessons } = component.props;
   const confirmation = doc && doc._id ? 'Course updated!' : 'Course added!';
   const upsert = {
     title: document.querySelector('[name="title"]').value.trim(),
     body: document.querySelector('[name="body"]').value.trim(),
   };
+
+  if (component.state.thumbnail) {
+    const { picture, thumbnail } = find(lessons, { thumbnail: component.state.thumbnail });
+    upsert.picture = picture;
+    upsert.thumbnail = thumbnail;
+  }
 
   if (doc && doc._id) upsert._id = doc._id;
 
@@ -51,13 +58,22 @@ const validate = (component) => {
 };
 
 export default class CourseEditor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { thumbnail: this.props.doc.thumbnail };
+  }
+
   componentDidMount() {
     validate(this);
     setTimeout(() => { document.querySelector('[name="title"]').focus(); }, 0);
   }
 
+  setThumbnail(thumbnail) {
+    this.setState({ thumbnail });
+  }
+
   render() {
-    const { doc } = this.props;
+    const { doc, lessons = [] } = this.props;
     return (<form
       ref={ form => (this.editor = form) }
       onSubmit={ event => event.preventDefault() }
@@ -81,6 +97,21 @@ export default class CourseEditor extends React.Component {
           placeholder="Congratulations! Today is your day. You're off to Great Places! You're off and away!"
         />
       </FormGroup>
+      { lessons.length ? (
+        <FormGroup>
+          <Label>Picture & Thumbnail</Label>
+          <Row>
+            { lessons.map((lesson, index) => (
+              <Col sm="12" md="4" lg="3" key={ index }>
+                <label className="radio-image">
+                  <input type="radio" name="thumbnail" onChange={ () => this.setThumbnail(lesson.thumbnail) } checked={ this.state.thumbnail === lesson.thumbnail } />
+                  <img src={ lesson.thumbnail } className="img-fluid" />
+                </label>
+              </Col>
+            )) }
+          </Row>
+        </FormGroup>
+      ) : null }
       <Button type="submit" color="success">
         { doc && doc._id ? 'Save Changes' : 'Add Course' }
       </Button>
@@ -90,4 +121,5 @@ export default class CourseEditor extends React.Component {
 
 CourseEditor.propTypes = {
   doc: React.PropTypes.object,
+  lessons: React.PropTypes.array,
 };
