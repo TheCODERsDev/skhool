@@ -4,22 +4,26 @@ import React from 'react';
 import { FormGroup, Label, Input, Button, Row, Col } from 'reactstrap';
 import { browserHistory } from 'react-router';
 import { Bert } from 'meteor/themeteorchef:bert';
-import { find } from 'lodash';
+import { find, get } from 'lodash';
 import { upsertCourse } from '../../api/courses/methods';
 import $ from '../../modules/validation';
 
 const handleUpsert = (component) => {
-  const { doc, lessons } = component.props;
+  const { doc, lessons = [] } = component.props;
   const confirmation = doc && doc._id ? 'Course updated!' : 'Course added!';
   const upsert = {
     title: document.querySelector('[name="title"]').value.trim(),
     body: document.querySelector('[name="body"]').value.trim(),
   };
 
-  if (component.state.thumbnail) {
-    const { image, thumbnail } = find(lessons, { thumbnail: component.state.thumbnail });
+  const lesson = find(lessons, { thumbnail: get(component, 'state.thumbnail') });
+  if (lesson) {
+    const { image, thumbnail } = lesson;
     upsert.image = image;
     upsert.thumbnail = thumbnail;
+  } else {
+    upsert.image = 'http://placehold.it/640x480?text=no image';
+    upsert.thumbnail = 'http://placehold.it/320x180?text=no image';
   }
 
   if (doc && doc._id) upsert._id = doc._id;
