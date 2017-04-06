@@ -60,7 +60,7 @@ const validate = (component) => {
 export default class CourseEditor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { thumbnail: this.props.doc.thumbnail };
+    this.state = { thumbnail: this.props.doc ? this.props.doc.thumbnail : null };
   }
 
   componentDidMount() {

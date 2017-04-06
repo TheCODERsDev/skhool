@@ -29,10 +29,12 @@ Courses.schema = new SimpleSchema({
   picture: {
     type: String,
     label: 'The picture of the course.',
+    optional: true,
   },
   thumbnail: {
     type: String,
     label: 'The thumbnail of the course.',
+    optional: true,
   },
 });
 
