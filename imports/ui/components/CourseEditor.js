@@ -17,8 +17,8 @@ const handleUpsert = (component) => {
   };
 
   if (component.state.thumbnail) {
-    const { picture, thumbnail } = find(lessons, { thumbnail: component.state.thumbnail });
-    upsert.picture = picture;
+    const { image, thumbnail } = find(lessons, { thumbnail: component.state.thumbnail });
+    upsert.image = image;
     upsert.thumbnail = thumbnail;
   }
 
@@ -99,7 +99,7 @@ export default class CourseEditor extends React.Component {
       </FormGroup>
       { lessons.length ? (
         <FormGroup>
-          <Label>Picture & Thumbnail</Label>
+          <Label>Image & Thumbnail</Label>
           <Row>
             { lessons.map((lesson, index) => (
               <Col sm="12" md="4" lg="3" key={ index }>

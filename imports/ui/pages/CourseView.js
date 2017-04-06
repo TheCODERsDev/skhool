@@ -33,9 +33,9 @@ const CourseView = ({ doc, lessons }) => (
         </ButtonGroup>
       </ButtonToolbar>
     </div>
-    { doc && doc.picture ? (
+    { doc && doc.image ? (
     <div>
-      <img src={ doc.picture } className="img-fluid" />
+      <img src={ doc.image } className="img-fluid" />
     </div>
     ) : null}
     <div className="mt-3 mb-3">

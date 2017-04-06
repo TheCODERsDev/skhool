@@ -26,9 +26,9 @@ Courses.schema = new SimpleSchema({
     type: String,
     label: 'The body of the course.',
   },
-  picture: {
+  image: {
     type: String,
-    label: 'The picture of the course.',
+    label: 'The image of the course.',
     optional: true,
   },
   thumbnail: {

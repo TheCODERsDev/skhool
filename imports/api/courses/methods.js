@@ -9,7 +9,7 @@ export const upsertCourse = new ValidatedMethod({
     _id: { type: String, optional: true },
     title: { type: String, optional: true },
     body: { type: String, optional: true },
-    picture: { type: String, optional: true },
+    image: { type: String, optional: true },
     thumbnail: { type: String, optional: true },
   }).validator(),
   run(course) {

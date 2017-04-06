@@ -29,7 +29,7 @@ export const formatLesson = new ValidatedMethod({
           link: `https://www.youtube.com/watch?v=${id}`,
           title: snippet.title,
           description: snippet.description,
-          picture: snippet.thumbnails.standard.url,
+          image: snippet.thumbnails.standard.url,
           thumbnail: snippet.thumbnails.medium.url,
           data: snippet,
         };

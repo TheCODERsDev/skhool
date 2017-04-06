@@ -9,7 +9,7 @@ export default class Index extends React.Component {
     $('#slides').superslides({
       play: 7000,
       inherit_width_from: '#slider',
-      inherit_height_from: '#slider'
+      inherit_height_from: '#slider',
     });
   }
 
@@ -50,7 +50,7 @@ export default class Index extends React.Component {
             </nav>
           </div>
         </div>
-        <Container style={{ 'marginTop': '20px'}}>
+        <Container style={{ marginTop: '20px' }}>
           <Jumbotron className="text-center">
             <h2>Skhool</h2>
             <p>Cool school for your skills</p>
