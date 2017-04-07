@@ -13,12 +13,13 @@ import ResetPassword from '../../ui/pages/ResetPassword';
 import Signup from '../../ui/pages/Signup';
 
 import ViewCourse from '../../ui/pages/ViewCourse';
-import ViewLesson from '../../ui/pages/ViewLesson';
 
 import CourseNew from '../../ui/pages/CourseNew';
 import CourseList from '../../ui/pages/CourseList';
 import CourseView from '../../ui/containers/CourseView';
 import CourseEdit from '../../ui/containers/CourseEdit';
+
+import LessonView from '../../ui/pages/LessonView';
 
 const authenticate = (nextState, replace) => {
   if (!Meteor.loggingIn() && !Meteor.userId()) {
@@ -32,7 +33,7 @@ const authenticate = (nextState, replace) => {
 Meteor.startup(() => {
   render(
     <Router history={ browserHistory }>
-      <Route name="viewLesson" path="/lesson" component={ ViewLesson } />
+      <Route name="LessonView" path="/courses/:courseId/lessons/:_id" component={ LessonView } />
       <Route path="/" component={ App }>
         <IndexRoute name="index" component={ Index } />
         <Route name="login" path="/login" component={ Login } />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { Table, Button } from 'reactstrap';
+import { Link } from 'react-router';
 import { removeLesson } from '../../api/lessons/methods';
 
 const handleRemove = ({ _id, title }) => {
@@ -24,7 +25,7 @@ export default class LessonList extends React.Component {
         { this.props.lessons.map((lesson, index) => (
           <tr key={ lesson._id }>
             <td>{ index + 1 }</td>
-            <td>{ lesson.title }</td>
+            <td><Link to={ `/courses/${lesson.course}/lessons/${lesson._id}` }>{ lesson.title }</Link></td>
             { this.props.editable ? (
               <td>
                 <Button color="danger" onClick={ () => handleRemove(lesson) }>
