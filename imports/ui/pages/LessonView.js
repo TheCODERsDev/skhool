@@ -27,11 +27,11 @@ const navbarStyle = {
 
 class LessonView extends React.Component {
   render() {
-    const { link, course } = this.props.doc;
+    const { url, course } = this.props.doc;
     const props = {
+      url,
       width: '100%',
       height: 'calc(100vh - 50px)',
-      url: link,
       controls: true,
       playing: true,
     };

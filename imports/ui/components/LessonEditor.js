@@ -10,24 +10,24 @@ import LessonList from './LessonList';
 const validate = (component) => {
   $(component.editor).validate({
     rules: {
-      link: {
+      url: {
         required: true,
       },
     },
     messages: {
-      link: {
-        required: 'Hey!! I need link.',
+      url: {
+        required: 'Hey!! I need url.',
       },
     },
     submitHandler() {
-      const linkEle = document.querySelector('[name="link"]');
-      const link = linkEle.value.trim();
+      const urlEle = document.querySelector('[name="url"]');
+      const url = urlEle.value.trim();
       const course = component.props.course._id;
-      formatLesson.callPromise({ course, link })
+      formatLesson.callPromise({ course, url })
       .then(formatted => upsertLesson.callPromise(formatted))
       .then((res) => {
         Bert.alert(res.insertedId ? 'Lesson added!' : 'Lesson updated!', 'success');
-        linkEle.value = null;
+        urlEle.value = null;
       })
       .catch(error => Bert.alert(error.message, 'danger'));
     },
@@ -44,7 +44,7 @@ export default class CourseEditor extends React.Component {
       <form className="mb-3" ref={ form => (this.editor = form) } onSubmit={ event => event.preventDefault() } >
         <FormGroup>
           <Label>Lesson Link</Label>
-          <Input type="text" name="link" placeholder="Hohoho! Just place your link here" />
+          <Input type="text" name="url" placeholder="Hohoho! Just place your url here" />
         </FormGroup>
         <Button type="submit" color="success">Add Lesson</Button>
       </form>
