@@ -12,8 +12,6 @@ import RecoverPassword from '../../ui/pages/RecoverPassword';
 import ResetPassword from '../../ui/pages/ResetPassword';
 import Signup from '../../ui/pages/Signup';
 
-import ViewCourse from '../../ui/pages/ViewCourse';
-
 import CourseNew from '../../ui/pages/CourseNew';
 import CourseList from '../../ui/pages/CourseList';
 import CourseView from '../../ui/containers/CourseView';
@@ -46,7 +44,6 @@ Meteor.startup(() => {
         <Route name="CourseView" path="courses/:_id" component={ CourseView } />
         <Route name="CourseEdit" path="courses/:_id/edit" component={ CourseEdit } onEnter={ authenticate } />
 
-        <Route name="viewCourse" path="/course" component={ ViewCourse } />
         <Route path="*" component={ NotFound } />
       </Route>
     </Router>,

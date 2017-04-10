@@ -34,7 +34,7 @@ const handleUpsert = (component) => {
     } else {
       component.editor.reset();
       Bert.alert(confirmation, 'success');
-      browserHistory.push(`/courses/${response.insertedId || doc._id}`);
+      browserHistory.push(`/courses/${response.insertedId || doc._id}/edit`);
     }
   });
 };
