@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Row, Col, Button, FormGroup, Label, Input, Container, Alert } from 'reactstrap';
 import handleSignup from '../../modules/signup';
+import FacebookLogin from '../components/FacebookLogin';
 
 export default class Signup extends React.Component {
   componentDidMount() {
@@ -53,7 +54,8 @@ export default class Signup extends React.Component {
                   placeholder="Password"
                 />
               </FormGroup>
-              <Button type="submit" color="success">Sign Up</Button>
+              <Button type="submit" color="success">Sign Up</Button>{' '}
+              <FacebookLogin />
             </form>
             <p>Already have an account? <Link to="/login">Log In</Link>.</p>
           </Col>

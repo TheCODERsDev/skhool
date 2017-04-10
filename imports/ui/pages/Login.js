@@ -3,6 +3,7 @@ import { Link, browserHistory } from 'react-router';
 import { Row, Col, Button, FormGroup, Label, Input, Container } from 'reactstrap';
 import { Meteor } from 'meteor/meteor';
 import handleLogin from '../../modules/login';
+import FacebookLogin from '../components/FacebookLogin';
 
 export default class Login extends React.Component {
   componentDidMount() {
@@ -52,9 +53,7 @@ export default class Login extends React.Component {
                 />
               </FormGroup>
               <Button type="submit" color="success">Login</Button>{' '}
-              <Button type="button" color="primary" onClick={ () => this.loginWithFacebook() } style={{ backgroundColor: '#3b5998' }}>
-                <i className="fa fa-facebook-official"></i> Continue with Facebook
-              </Button>
+              <FacebookLogin />
             </form>
           </Col>
         </Row>
