@@ -8,7 +8,7 @@ const handleLogout = () => Meteor.logout(() => browserHistory.push('/login'));
 const userName = () => {
   const user = Meteor.user();
   const name = user && user.profile ? user.profile.name : '';
-  return user ? `${name.first} ${name.last}` : '';
+  return user ? `${name}` : '';
 };
 
 export default class AuthenticatedNavigation extends React.Component {

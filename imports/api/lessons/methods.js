@@ -15,11 +15,11 @@ export const formatLesson = new ValidatedMethod({
     url: { type: String, optional: true },
   }).validator(),
   run({ course, url }) {
-    const parsed = new URL(url);
-    const query = qs.parse(parsed.query.substr(1, parsed.query.length - 1));
-    const id = query.v;
-    const key = process.env.GOOGLE_API_KEY;
     if (Meteor.isServer) {
+      const parsed = new URL(url);
+      const query = qs.parse(parsed.query.substr(1, parsed.query.length - 1));
+      const id = query.v;
+      const key = Meteor.settings.private.googleKey;
       return rp(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${key}`)
       .then((res) => {
         const response = JSON.parse(res);

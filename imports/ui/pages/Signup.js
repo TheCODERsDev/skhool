@@ -23,25 +23,14 @@ export default class Signup extends React.Component {
               onSubmit={ this.handleSubmit }
             >
               <Row>
-                <Col xs={ 6 } sm={ 6 }>
+                <Col>
                   <FormGroup>
-                    <Label>First Name</Label>
+                    <Label>Name</Label>
                     <Input
                       type="text"
-                      ref="firstName"
-                      name="firstName"
-                      placeholder="First Name"
-                    />
-                  </FormGroup>
-                </Col>
-                <Col xs={ 6 } sm={ 6 }>
-                  <FormGroup>
-                    <Label>Last Name</Label>
-                    <Input
-                      type="text"
-                      ref="lastName"
-                      name="lastName"
-                      placeholder="Last Name"
+                      ref="name"
+                      name="name"
+                      placeholder="Full Name"
                     />
                   </FormGroup>
                 </Col>

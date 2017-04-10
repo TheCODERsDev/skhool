@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 import { Row, Col, Button, FormGroup, Label, Input, Container } from 'reactstrap';
+import { Meteor } from 'meteor/meteor';
 import handleLogin from '../../modules/login';
 
 export default class Login extends React.Component {
@@ -10,6 +11,12 @@ export default class Login extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+  }
+
+  loginWithFacebook() {
+    Meteor.loginWithFacebook({
+      requestPermissions: ['public_profile', 'email'],
+    }, () => browserHistory.push('/'));
   }
 
   render() {
@@ -44,7 +51,10 @@ export default class Login extends React.Component {
                   placeholder="Password"
                 />
               </FormGroup>
-              <Button type="submit" color="success">Login</Button>
+              <Button type="submit" color="success">Login</Button>{' '}
+              <Button type="button" color="primary" onClick={ () => this.loginWithFacebook() } style={{ backgroundColor: '#3b5998' }}>
+                <i className="fa fa-facebook-official"></i> Continue with Facebook
+              </Button>
             </form>
           </Col>
         </Row>

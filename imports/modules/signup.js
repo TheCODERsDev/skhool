@@ -11,10 +11,7 @@ const getUserData = () => ({
   email: document.querySelector('[name="emailAddress"]').value,
   password: document.querySelector('[name="password"]').value,
   profile: {
-    name: {
-      first: document.querySelector('[name="firstName"]').value,
-      last: document.querySelector('[name="lastName"]').value,
-    },
+    name: document.querySelector('[name="name"]').value,
   },
 });
 
@@ -34,10 +31,7 @@ const signup = () => {
 const validate = () => {
   $(component.signupForm).validate({
     rules: {
-      firstName: {
-        required: true,
-      },
-      lastName: {
+      name: {
         required: true,
       },
       emailAddress: {
@@ -50,11 +44,8 @@ const validate = () => {
       },
     },
     messages: {
-      firstName: {
-        required: 'First name?',
-      },
-      lastName: {
-        required: 'Last name?',
+      name: {
+        required: 'Full name?',
       },
       emailAddress: {
         required: 'Need an email address here.',
