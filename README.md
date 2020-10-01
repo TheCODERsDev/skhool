@@ -1,5 +1,5 @@
 # Skhool
-Cool school for your skills
+Cool school for your  skills
 
 ### ENV
 ```
